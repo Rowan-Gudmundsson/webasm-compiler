@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libMyLib.a  CMakeFiles/MyLib.dir/src/parser.cpp.o CMakeFiles/MyLib.dir/src/scanner.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libMyLib.a

@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++   -std=c++11 -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Webasm.dir/src/driver.cpp.o CMakeFiles/Webasm.dir/src/parser.cpp.o CMakeFiles/Webasm.dir/src/scanner.cpp.o CMakeFiles/Webasm.dir/src/table.cpp.o  -o Webasm 
