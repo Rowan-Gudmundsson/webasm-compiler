@@ -1,4 +1,4 @@
-PROJECT(Webasm)
+PROJECT(rolang)
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 
 
@@ -22,10 +22,12 @@ SET(BISON_OUTPUT ${CMAKE_SOURCE_DIR}/src/parser.cpp)
 IF(BISON_FOUND)
     ADD_CUSTOM_COMMAND(
       OUTPUT ${BISON_OUTPUT}
+      PRE_BUILD
       COMMAND ${BISON_EXECUTABLE}
               --defines=${CMAKE_SOURCE_DIR}/include/tokens.h
               --output=${BISON_OUTPUT}
               ${CMAKE_SOURCE_DIR}/parsing/parser.y
+      DEPENDS ${CMAKE_SOURCE_DIR}/parsing/parser.y
       COMMENT "Generating parser.cpp"
     )
 ENDIF()
@@ -35,9 +37,11 @@ SET(FLEX_OUTPUT ${CMAKE_SOURCE_DIR}/src/scanner.cpp)
 IF(FLEX_FOUND)
     ADD_CUSTOM_COMMAND(
       OUTPUT ${FLEX_OUTPUT}
+      PRE_BUILD
       COMMAND ${FLEX_EXECUTABLE}
               --outfile=${FLEX_OUTPUT}
               ${CMAKE_SOURCE_DIR}/parsing/scanner.l
+      DEPENDS ${CMAKE_SOURCE_DIR}/parsing/scanner.l
       COMMENT "Generating scanner.cpp"
     )
 ENDIF()

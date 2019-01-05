@@ -45,7 +45,55 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    COMMA = 258
+    COMMA = 258,
+    SEMI = 259,
+    AUTOASSIGN = 260,
+    ASSIGN = 261,
+    INTEGER_CONSTANT = 262,
+    BOOLEAN_CONSTANT = 263,
+    LET = 264,
+    CONST = 265,
+    STATIC = 266,
+    FUNC = 267,
+    ASTERISK = 268,
+    LANGLE = 269,
+    RANGLE = 270,
+    LPAREN = 271,
+    RPAREN = 272,
+    LBRACE = 273,
+    RBRACE = 274,
+    LBRACKET = 275,
+    RBRACKET = 276,
+    IDENTIFIER = 277,
+    BOOL = 278,
+    IF = 279,
+    ELSE = 280,
+    ELSEIF = 281,
+    SWITCH = 282,
+    WHILE = 283,
+    DO = 284,
+    FOR = 285,
+    BREAK = 286,
+    CONTINUE = 287,
+    RETURN = 288,
+    GOTO = 289,
+    INT = 290,
+    INT_8 = 291,
+    INT_16 = 292,
+    INT_32 = 293,
+    INT_64 = 294,
+    CHAR = 295,
+    FLOAT = 296,
+    FLOAT_64 = 297,
+    VEC = 298,
+    VEC_2 = 299,
+    VEC_3 = 300,
+    VEC_4 = 301,
+    MAT = 302,
+    MAT_2 = 303,
+    MAT_3 = 304,
+    MAT_4 = 305,
+    ERROR = 306
   };
 #endif
 
@@ -54,12 +102,12 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 6 "/Users/rowan/programming/webasm/parsing/parser.y" /* yacc.c:1919  */
+#line 14 "/Users/rowan/programming/webasm/parsing/parser.y" /* yacc.c:1919  */
 
   // Non-terminal types
   int ival;
 
-#line 63 "/Users/rowan/programming/webasm/include/tokens.h" /* yacc.c:1919  */
+#line 111 "/Users/rowan/programming/webasm/include/tokens.h" /* yacc.c:1919  */
 };
 
 typedef union YYSTYPE YYSTYPE;

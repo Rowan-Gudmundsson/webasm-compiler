@@ -62,7 +62,7 @@
 
 
 /* Copy the first part of user declarations.  */
-#line 1 "/Users/rowan/programming/webasm/parsing/parser.y" /* yacc.c:339  */
+#line 1 "parser.y" /* yacc.c:339  */
 
   // Includes
   #include <iostream>
@@ -75,7 +75,7 @@
   int yyerror(char* err);
   int yylex(void);
 
-#line 79 "/Users/rowan/programming/webasm/src/parser.cpp" /* yacc.c:339  */
+#line 79 "parser.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -93,10 +93,7 @@
 # define YYERROR_VERBOSE 0
 #endif
 
-/* In a future release of Bison, this section will be replaced
-   by #include "tokens.h".  */
-#ifndef YY_YY_USERS_ROWAN_PROGRAMMING_WEBASM_INCLUDE_TOKENS_H_INCLUDED
-# define YY_YY_USERS_ROWAN_PROGRAMMING_WEBASM_INCLUDE_TOKENS_H_INCLUDED
+
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 0
@@ -167,12 +164,12 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 14 "/Users/rowan/programming/webasm/parsing/parser.y" /* yacc.c:355  */
+#line 14 "parser.y" /* yacc.c:355  */
 
   // Non-terminal types
   int ival;
 
-#line 176 "/Users/rowan/programming/webasm/src/parser.cpp" /* yacc.c:355  */
+#line 173 "parser.tab.c" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -185,11 +182,11 @@ extern YYSTYPE yylval;
 
 int yyparse (void);
 
-#endif /* !YY_YY_USERS_ROWAN_PROGRAMMING_WEBASM_INCLUDE_TOKENS_H_INCLUDED  */
+
 
 /* Copy the second part of user declarations.  */
 
-#line 193 "/Users/rowan/programming/webasm/src/parser.cpp" /* yacc.c:358  */
+#line 190 "parser.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -438,7 +435,7 @@ union yyalloc
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  26
 /* YYNRULES -- Number of rules.  */
-#define YYNRULES  82
+#define YYNRULES  81
 /* YYNSTATES -- Number of states.  */
 #define YYNSTATES  173
 
@@ -498,8 +495,8 @@ static const yytype_uint8 yyrline[] =
      120,   121,   122,   125,   126,   127,   128,   129,   132,   135,
      138,   143,   144,   147,   148,   151,   154,   155,   158,   159,
      160,   163,   164,   165,   166,   167,   168,   169,   170,   171,
-     174,   175,   177,   180,   181,   182,   183,   184,   185,   186,
-     187,   188,   191
+     174,   175,   179,   180,   181,   182,   183,   184,   185,   186,
+     187,   190
 };
 #endif
 
@@ -579,10 +576,10 @@ static const yytype_int16 yypact[] =
      means the default is an error.  */
 static const yytype_uint8 yydefact[] =
 {
-       4,    58,    59,    60,     0,    82,     0,     2,     5,     6,
+       4,    58,    59,    60,     0,    81,     0,     2,     5,     6,
        0,    56,     0,     0,     1,     3,     0,     0,    57,     0,
-       0,     0,     0,    73,    74,    75,    76,    77,    78,    79,
-      80,    81,     0,    70,    70,    70,     0,    70,    70,    70,
+       0,     0,     0,    72,    73,    74,    75,    76,    77,    78,
+      79,    80,     0,    70,    70,    70,     0,    70,    70,    70,
        7,    51,    61,    55,     0,    12,    15,     0,     0,     0,
        0,     0,     0,    63,    64,    65,     0,    67,    68,    69,
       53,    52,    48,     0,     0,    10,     0,    12,    50,    49,
@@ -708,8 +705,8 @@ static const yytype_uint8 yyr1[] =
       66,    66,    66,    67,    67,    67,    67,    67,    68,    68,
       68,    69,    69,    70,    70,    71,    72,    72,    73,    73,
       73,    74,    74,    74,    74,    74,    74,    74,    74,    74,
-      75,    75,    75,    76,    76,    76,    76,    76,    76,    76,
-      76,    76,    77
+      75,    75,    76,    76,    76,    76,    76,    76,    76,    76,
+      76,    77
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
@@ -722,8 +719,8 @@ static const yytype_uint8 yyr2[] =
        7,     7,     6,     3,     2,     2,     2,     3,     4,     5,
        5,     1,     2,     1,     2,     1,     1,     2,     1,     1,
        1,     1,     5,     2,     2,     2,     7,     2,     2,     2,
-       0,     3,     0,     1,     1,     1,     1,     1,     1,     1,
-       1,     1,     1
+       0,     3,     1,     1,     1,     1,     1,     1,     1,     1,
+       1,     1
 };
 
 
@@ -1401,86 +1398,86 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 44 "/Users/rowan/programming/webasm/parsing/parser.y" /* yacc.c:1666  */
+#line 44 "parser.y" /* yacc.c:1666  */
     {
     // std::cout << "REDUCING EXT" << std::endl;
   }
-#line 1409 "/Users/rowan/programming/webasm/src/parser.cpp" /* yacc.c:1666  */
+#line 1406 "parser.tab.c" /* yacc.c:1666  */
     break;
 
   case 3:
-#line 47 "/Users/rowan/programming/webasm/parsing/parser.y" /* yacc.c:1666  */
+#line 47 "parser.y" /* yacc.c:1666  */
     {
     // std::cout << "REDUCING EXT AGAIN" << std::endl;
   }
-#line 1417 "/Users/rowan/programming/webasm/src/parser.cpp" /* yacc.c:1666  */
+#line 1414 "parser.tab.c" /* yacc.c:1666  */
     break;
 
   case 5:
-#line 53 "/Users/rowan/programming/webasm/parsing/parser.y" /* yacc.c:1666  */
+#line 53 "parser.y" /* yacc.c:1666  */
     {
 
   }
-#line 1425 "/Users/rowan/programming/webasm/src/parser.cpp" /* yacc.c:1666  */
+#line 1422 "parser.tab.c" /* yacc.c:1666  */
     break;
 
   case 6:
-#line 56 "/Users/rowan/programming/webasm/parsing/parser.y" /* yacc.c:1666  */
+#line 56 "parser.y" /* yacc.c:1666  */
     {
     // std::cout << "REDUCING DECL" << std::endl;
   }
-#line 1433 "/Users/rowan/programming/webasm/src/parser.cpp" /* yacc.c:1666  */
+#line 1430 "parser.tab.c" /* yacc.c:1666  */
     break;
 
   case 13:
-#line 73 "/Users/rowan/programming/webasm/parsing/parser.y" /* yacc.c:1666  */
+#line 73 "parser.y" /* yacc.c:1666  */
     {
 
   }
-#line 1441 "/Users/rowan/programming/webasm/src/parser.cpp" /* yacc.c:1666  */
+#line 1438 "parser.tab.c" /* yacc.c:1666  */
     break;
 
   case 14:
-#line 76 "/Users/rowan/programming/webasm/parsing/parser.y" /* yacc.c:1666  */
+#line 76 "parser.y" /* yacc.c:1666  */
     {
     
   }
-#line 1449 "/Users/rowan/programming/webasm/src/parser.cpp" /* yacc.c:1666  */
+#line 1446 "parser.tab.c" /* yacc.c:1666  */
     break;
 
   case 48:
-#line 132 "/Users/rowan/programming/webasm/parsing/parser.y" /* yacc.c:1666  */
+#line 132 "parser.y" /* yacc.c:1666  */
     {
     // std::cout << "REDUCING AUTOASSIGN" << std::endl;
   }
-#line 1457 "/Users/rowan/programming/webasm/src/parser.cpp" /* yacc.c:1666  */
+#line 1454 "parser.tab.c" /* yacc.c:1666  */
     break;
 
   case 49:
-#line 135 "/Users/rowan/programming/webasm/parsing/parser.y" /* yacc.c:1666  */
+#line 135 "parser.y" /* yacc.c:1666  */
     {
     // std::cout << "REDUCING AUTOASSIGN W/ QUALIFIER" << std::endl;
   }
-#line 1465 "/Users/rowan/programming/webasm/src/parser.cpp" /* yacc.c:1666  */
+#line 1462 "parser.tab.c" /* yacc.c:1666  */
     break;
 
   case 50:
-#line 138 "/Users/rowan/programming/webasm/parsing/parser.y" /* yacc.c:1666  */
+#line 138 "parser.y" /* yacc.c:1666  */
     {
     // std::cout << "REDUCING NORMAL ASSIGN" << std::endl;
   }
-#line 1473 "/Users/rowan/programming/webasm/src/parser.cpp" /* yacc.c:1666  */
+#line 1470 "parser.tab.c" /* yacc.c:1666  */
     break;
 
   case 71:
-#line 175 "/Users/rowan/programming/webasm/parsing/parser.y" /* yacc.c:1666  */
+#line 175 "parser.y" /* yacc.c:1666  */
     {
   }
-#line 1480 "/Users/rowan/programming/webasm/src/parser.cpp" /* yacc.c:1666  */
+#line 1477 "parser.tab.c" /* yacc.c:1666  */
     break;
 
 
-#line 1484 "/Users/rowan/programming/webasm/src/parser.cpp" /* yacc.c:1666  */
+#line 1481 "parser.tab.c" /* yacc.c:1666  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1708,4 +1705,4 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 194 "/Users/rowan/programming/webasm/parsing/parser.y" /* yacc.c:1910  */
+#line 193 "parser.y" /* yacc.c:1910  */

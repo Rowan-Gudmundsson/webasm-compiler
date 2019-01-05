@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named rolang_SUCCESSFUL
+
+# Build rule for target.
+rolang_SUCCESSFUL: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rolang_SUCCESSFUL
+.PHONY : rolang_SUCCESSFUL
+
+# fast build rule for target.
+rolang_SUCCESSFUL/fast:
+	$(MAKE) -f CMakeFiles/rolang_SUCCESSFUL.dir/build.make CMakeFiles/rolang_SUCCESSFUL.dir/build
+.PHONY : rolang_SUCCESSFUL/fast
+
+#=============================================================================
 # Target rules for targets named MyLib
 
 # Build rule for target.
@@ -124,30 +137,17 @@ MyLib/fast:
 .PHONY : MyLib/fast
 
 #=============================================================================
-# Target rules for targets named Webasm_SUCCESSFUL
+# Target rules for targets named rolang
 
 # Build rule for target.
-Webasm_SUCCESSFUL: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Webasm_SUCCESSFUL
-.PHONY : Webasm_SUCCESSFUL
+rolang: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rolang
+.PHONY : rolang
 
 # fast build rule for target.
-Webasm_SUCCESSFUL/fast:
-	$(MAKE) -f CMakeFiles/Webasm_SUCCESSFUL.dir/build.make CMakeFiles/Webasm_SUCCESSFUL.dir/build
-.PHONY : Webasm_SUCCESSFUL/fast
-
-#=============================================================================
-# Target rules for targets named Webasm
-
-# Build rule for target.
-Webasm: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Webasm
-.PHONY : Webasm
-
-# fast build rule for target.
-Webasm/fast:
-	$(MAKE) -f CMakeFiles/Webasm.dir/build.make CMakeFiles/Webasm.dir/build
-.PHONY : Webasm/fast
+rolang/fast:
+	$(MAKE) -f CMakeFiles/rolang.dir/build.make CMakeFiles/rolang.dir/build
+.PHONY : rolang/fast
 
 src/driver.o: src/driver.cpp.o
 
@@ -155,7 +155,7 @@ src/driver.o: src/driver.cpp.o
 
 # target to build an object file
 src/driver.cpp.o:
-	$(MAKE) -f CMakeFiles/Webasm.dir/build.make CMakeFiles/Webasm.dir/src/driver.cpp.o
+	$(MAKE) -f CMakeFiles/rolang.dir/build.make CMakeFiles/rolang.dir/src/driver.cpp.o
 .PHONY : src/driver.cpp.o
 
 src/driver.i: src/driver.cpp.i
@@ -164,7 +164,7 @@ src/driver.i: src/driver.cpp.i
 
 # target to preprocess a source file
 src/driver.cpp.i:
-	$(MAKE) -f CMakeFiles/Webasm.dir/build.make CMakeFiles/Webasm.dir/src/driver.cpp.i
+	$(MAKE) -f CMakeFiles/rolang.dir/build.make CMakeFiles/rolang.dir/src/driver.cpp.i
 .PHONY : src/driver.cpp.i
 
 src/driver.s: src/driver.cpp.s
@@ -173,8 +173,35 @@ src/driver.s: src/driver.cpp.s
 
 # target to generate assembly for a file
 src/driver.cpp.s:
-	$(MAKE) -f CMakeFiles/Webasm.dir/build.make CMakeFiles/Webasm.dir/src/driver.cpp.s
+	$(MAKE) -f CMakeFiles/rolang.dir/build.make CMakeFiles/rolang.dir/src/driver.cpp.s
 .PHONY : src/driver.cpp.s
+
+src/errors.o: src/errors.cpp.o
+
+.PHONY : src/errors.o
+
+# target to build an object file
+src/errors.cpp.o:
+	$(MAKE) -f CMakeFiles/rolang.dir/build.make CMakeFiles/rolang.dir/src/errors.cpp.o
+.PHONY : src/errors.cpp.o
+
+src/errors.i: src/errors.cpp.i
+
+.PHONY : src/errors.i
+
+# target to preprocess a source file
+src/errors.cpp.i:
+	$(MAKE) -f CMakeFiles/rolang.dir/build.make CMakeFiles/rolang.dir/src/errors.cpp.i
+.PHONY : src/errors.cpp.i
+
+src/errors.s: src/errors.cpp.s
+
+.PHONY : src/errors.s
+
+# target to generate assembly for a file
+src/errors.cpp.s:
+	$(MAKE) -f CMakeFiles/rolang.dir/build.make CMakeFiles/rolang.dir/src/errors.cpp.s
+.PHONY : src/errors.cpp.s
 
 src/parser.o: src/parser.cpp.o
 
@@ -183,7 +210,7 @@ src/parser.o: src/parser.cpp.o
 # target to build an object file
 src/parser.cpp.o:
 	$(MAKE) -f CMakeFiles/MyLib.dir/build.make CMakeFiles/MyLib.dir/src/parser.cpp.o
-	$(MAKE) -f CMakeFiles/Webasm.dir/build.make CMakeFiles/Webasm.dir/src/parser.cpp.o
+	$(MAKE) -f CMakeFiles/rolang.dir/build.make CMakeFiles/rolang.dir/src/parser.cpp.o
 .PHONY : src/parser.cpp.o
 
 src/parser.i: src/parser.cpp.i
@@ -193,7 +220,7 @@ src/parser.i: src/parser.cpp.i
 # target to preprocess a source file
 src/parser.cpp.i:
 	$(MAKE) -f CMakeFiles/MyLib.dir/build.make CMakeFiles/MyLib.dir/src/parser.cpp.i
-	$(MAKE) -f CMakeFiles/Webasm.dir/build.make CMakeFiles/Webasm.dir/src/parser.cpp.i
+	$(MAKE) -f CMakeFiles/rolang.dir/build.make CMakeFiles/rolang.dir/src/parser.cpp.i
 .PHONY : src/parser.cpp.i
 
 src/parser.s: src/parser.cpp.s
@@ -203,7 +230,7 @@ src/parser.s: src/parser.cpp.s
 # target to generate assembly for a file
 src/parser.cpp.s:
 	$(MAKE) -f CMakeFiles/MyLib.dir/build.make CMakeFiles/MyLib.dir/src/parser.cpp.s
-	$(MAKE) -f CMakeFiles/Webasm.dir/build.make CMakeFiles/Webasm.dir/src/parser.cpp.s
+	$(MAKE) -f CMakeFiles/rolang.dir/build.make CMakeFiles/rolang.dir/src/parser.cpp.s
 .PHONY : src/parser.cpp.s
 
 src/scanner.o: src/scanner.cpp.o
@@ -213,7 +240,7 @@ src/scanner.o: src/scanner.cpp.o
 # target to build an object file
 src/scanner.cpp.o:
 	$(MAKE) -f CMakeFiles/MyLib.dir/build.make CMakeFiles/MyLib.dir/src/scanner.cpp.o
-	$(MAKE) -f CMakeFiles/Webasm.dir/build.make CMakeFiles/Webasm.dir/src/scanner.cpp.o
+	$(MAKE) -f CMakeFiles/rolang.dir/build.make CMakeFiles/rolang.dir/src/scanner.cpp.o
 .PHONY : src/scanner.cpp.o
 
 src/scanner.i: src/scanner.cpp.i
@@ -223,7 +250,7 @@ src/scanner.i: src/scanner.cpp.i
 # target to preprocess a source file
 src/scanner.cpp.i:
 	$(MAKE) -f CMakeFiles/MyLib.dir/build.make CMakeFiles/MyLib.dir/src/scanner.cpp.i
-	$(MAKE) -f CMakeFiles/Webasm.dir/build.make CMakeFiles/Webasm.dir/src/scanner.cpp.i
+	$(MAKE) -f CMakeFiles/rolang.dir/build.make CMakeFiles/rolang.dir/src/scanner.cpp.i
 .PHONY : src/scanner.cpp.i
 
 src/scanner.s: src/scanner.cpp.s
@@ -233,7 +260,7 @@ src/scanner.s: src/scanner.cpp.s
 # target to generate assembly for a file
 src/scanner.cpp.s:
 	$(MAKE) -f CMakeFiles/MyLib.dir/build.make CMakeFiles/MyLib.dir/src/scanner.cpp.s
-	$(MAKE) -f CMakeFiles/Webasm.dir/build.make CMakeFiles/Webasm.dir/src/scanner.cpp.s
+	$(MAKE) -f CMakeFiles/rolang.dir/build.make CMakeFiles/rolang.dir/src/scanner.cpp.s
 .PHONY : src/scanner.cpp.s
 
 src/table.o: src/table.cpp.o
@@ -242,7 +269,7 @@ src/table.o: src/table.cpp.o
 
 # target to build an object file
 src/table.cpp.o:
-	$(MAKE) -f CMakeFiles/Webasm.dir/build.make CMakeFiles/Webasm.dir/src/table.cpp.o
+	$(MAKE) -f CMakeFiles/rolang.dir/build.make CMakeFiles/rolang.dir/src/table.cpp.o
 .PHONY : src/table.cpp.o
 
 src/table.i: src/table.cpp.i
@@ -251,7 +278,7 @@ src/table.i: src/table.cpp.i
 
 # target to preprocess a source file
 src/table.cpp.i:
-	$(MAKE) -f CMakeFiles/Webasm.dir/build.make CMakeFiles/Webasm.dir/src/table.cpp.i
+	$(MAKE) -f CMakeFiles/rolang.dir/build.make CMakeFiles/rolang.dir/src/table.cpp.i
 .PHONY : src/table.cpp.i
 
 src/table.s: src/table.cpp.s
@@ -260,7 +287,7 @@ src/table.s: src/table.cpp.s
 
 # target to generate assembly for a file
 src/table.cpp.s:
-	$(MAKE) -f CMakeFiles/Webasm.dir/build.make CMakeFiles/Webasm.dir/src/table.cpp.s
+	$(MAKE) -f CMakeFiles/rolang.dir/build.make CMakeFiles/rolang.dir/src/table.cpp.s
 .PHONY : src/table.cpp.s
 
 # Help Target
@@ -269,14 +296,17 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... rolang_SUCCESSFUL"
 	@echo "... MyLib"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Webasm_SUCCESSFUL"
-	@echo "... Webasm"
+	@echo "... rolang"
 	@echo "... src/driver.o"
 	@echo "... src/driver.i"
 	@echo "... src/driver.s"
+	@echo "... src/errors.o"
+	@echo "... src/errors.i"
+	@echo "... src/errors.s"
 	@echo "... src/parser.o"
 	@echo "... src/parser.i"
 	@echo "... src/parser.s"

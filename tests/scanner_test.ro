@@ -1,0 +1,7 @@
+func main() int {
+  if (true) {}
+  if (true) {} else {}
+  if true {} else {}
+  if false {}
+  let foo vec2<float> = 2;
+}
